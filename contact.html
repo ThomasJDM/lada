@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lada | Машины</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="forma_urakova">
+      <ion-icon class="close_form" name="close-outline"></ion-icon>
+      <div class="title_urakova">Отличный Выбор!</div>
+      <div class="sup_title_urakova">Оставляй заявку на заказ данного автомобиля</div>
+      <div class="model_urakova">Модель: </div>
+      <label>Ваша Фамилия</label>
+      <input type="text" placeholder="Фамилия">
+      <label>Ваше имя</label>
+      <input type="text" placeholder="Имя">
+      <label>Ваше Отчество</label>
+      <input type="text" placeholder="Отчество">
+      <label>Ваш телефон</label>
+      <input type="text" placeholder="+ 7 987 652 32 49">
+      <button class="by">Купить</button>
+    </div>
+
+    <header>
+      <div class="header-inner">
+        <h1>Lada</h1>
+        <nav>
+          <a href="index.html">Главная</a>
+          <a href="about.html">О нас</a>
+          <a href="services.html">Машины</a>
+          <a href="contact.html">Контакты</a>
+        </nav>
+      </div>
+    </header>
+    <i class="fa-solid fa-bars"></i>
+    <div class="headerphone">
+      <a href="index.html" class="headerphonelink">Главная</a>
+      <a href="about.html" class="headerphonelink">О нас</a>
+      <a href="services.html" class="headerphonelink">Машины</a>
+      <a href="contact.html" class="headerphonelink">Контакты</a>
+    </div>
+    <div class="contact-block">
+      <h3>Контакты</h3>
+      <p>Телефон: 321-53-123</p>
+      <p>Телефон: 543-765-706</p>
+      <p>Email: Lada@gmail.com</p>
+      <p>Адрес: ул. Примерная, 123</p>
+      <p>Партнерка: LadaPtn@gmail.com</p>
+    </div>
+    <iframe
+      src="https://yandex.ru/map-widget/v1/?um=constructor%3A97a83aaba49818dd6a27567c32d3043a665ad2ea9533efb0f2ffc25887e883c2&amp;source=constructor"
+      class="carta" frameborder="0"></iframe>
+  </div>
+
+  <script>
+    let by = document.querySelectorAll('.by');
+    let modelUrakova = document.querySelector('.model_urakova');
+
+    by.forEach((e, i) => {
+      e.addEventListener('click', () => {
+        document.querySelector('.forma_urakova').classList.add('forma_urakova_an');
+        modelUrakova.innerHTML = `Модель: ${document.querySelectorAll('.title_car')[i - 1].innerHTML}`;
+      });
+    });
+
+    let closeForm = document.querySelector('.close_form');
+
+    closeForm.addEventListener('click', () => {
+      document.querySelector('.forma_urakova').classList.remove('forma_urakova_an');
+    });
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
